@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
 <title>Atividade Web II</title>
 </head>
 <body>
@@ -24,9 +25,11 @@
 
     <hr>
 
-    <!--Cria mais um botão para remover por índice-->
-    <input type="number" id="indiceRemover" placeholder="Índice para remover">
-    <button onclick="removerPorIndice()">Remover por Índice</button>
+    <div class="resumo">
+        <!--Cria mais um botão para remover por índice-->
+        <input type="number" id="indiceRemover" placeholder="Índice para remover">
+        <button onclick="removerPorIndice()">Remover por Índice</button>
+    </div>
 
     <div id="saida"></div>
 </div>
@@ -100,8 +103,8 @@ function resumo(){
     //mostra o resultado do que sair em cima
     document.getElementById("saida").innerHTML =
         "<h2>Resumo</h2>" +
-        "Quantidade total de itens: " + totalProd + "<br>" +
-        "Valor total da compra: R$ " + total.toFixed(2);
+        "<p>Quantidade total de itens: </p>" + "<p>" + totalProd + "</p><br>" +
+        "<p>Valor total da compra: R$ </p>" + "<p>" + total.toFixed(2) + "</p>";
 }
 
 //Cria uma função para tirar algo da lista de acordo com a posição dele
